@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load More Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .item {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            display: none; /* تكوين العناصر لتكون مخفية في البداية */
+        }
+    </style>
+</head>
+<body>
+  <a href="index.html">Home</a>
+
+    <div id="container">
+        <!-- العناصر التي تظهر عند البداية -->
+        <div class="item">عنصر 1</div>
+        <div class="item">عنصر 2</div>
+        <div class="item">عنصر 3</div>
+
+        <!-- العناصر التي ستظهر بعد الضغط على "Load More" -->
+        <div class="item">عنصر 4</div>
+        <div class="item">عنصر 5</div>
+        <div class="item">عنصر 6</div>
+
+         <!-- العناصر التي ستظهر بعد الضغط على "Load More" -->
+         <div class="item">عنصر 4</div>
+         <div class="item">عنصر 5</div>
+         <div class="item">عنصر 6</div>
+
+          <!-- العناصر التي ستظهر بعد الضغط على "Load More" -->
+        <div class="item">عنصر 4</div>
+        <div class="item">عنصر 5</div>
+        <div class="item">عنصر 6</div>
+        <!-- زر "Load More" -->
+        <button id="loadMore">Load More</button>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // عدد العناصر التي تظهر في البداية
+            var itemsToShow = 3;
+
+            // إظهار العناصر الأولى
+            $(".item:lt(" + itemsToShow + ")").show();
+
+            // الضغط على زر "Load More"
+            $("#loadMore").on("click", function () {
+                showItems();
+            });
+
+            // دالة لإظهار العناصر
+            function showItems() {
+                // البحث عن العناصر التي لم تظهر
+                var hiddenItems = $(".item:hidden");
+
+                // إظهار عدد محدد من العناصر
+                for (var i = 0; i < itemsToShow && i < hiddenItems.length; i++) {
+                    $(hiddenItems[i]).show();
+                }
+
+                // إذا كانت جميع العناصر قد ظهرت، قم بإخفاء زر "Load More"
+                if ($(".item:hidden").length === 0) {
+                    $("#loadMore").hide();
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
