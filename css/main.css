@@ -624,17 +624,19 @@ h3 {
     display: none;
 }
 #theCarousel5tablet,#theCarousel5mobile, #theCarousel4mobile, #theCarousel3mobile, #theCarouselmobile, 
-#theCarousel4tablet , #theCarousel3tablet, #theCarouseltablet, #theCarousel2mobile {
+#theCarousel4tablet , #theCarousel3tablet, #theCarouseltablet, #theCarousel2mobile,
+#theCarousel5tablet-1,#theCarousel5mobile-1, #theCarousel4mobile-1, #theCarousel3mobile-1, #theCarouselmobile-1, 
+#theCarousel4tablet-1 , #theCarousel3tablet-1, #theCarouseltablet-1, #theCarousel2mobile-1 {
     display: none;
 }
 
 /* css for resposive screens ----------------------------------------------------- */
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
-    #theCarousel5mobile {
+    #theCarousel5mobile, #theCarousel5mobile-1 {
         display: none;
     }
-    #theCarousel5tablet {
+    #theCarousel5tablet, #theCarousel5tablet-1 {
         display: block;
     }
  }
@@ -683,25 +685,27 @@ h3 {
     .brand-product img {
         width: 100%;
     }
-    #theCarousel5mobile {
+    #theCarousel5mobile, #theCarousel5mobile-1 {
         display: block;
     }
-    #theCarousel5 {
+    #theCarousel5, #theCarousel5-1 {
         display: none;
     }
-    #theCarousel5tablet {
+    #theCarousel5tablet, #theCarousel5tablet {
         display: none;
     }
     .banners .banner2 {
         margin-bottom: 2rem;
     }
-    #theCarousel4mobile {
+    #theCarousel4mobile, #theCarousel4mobile-1 {
         display: block;
     }
-    #theCarousel3, #theCarousel4, #theCarousel, #theCarousel2 {
+    #theCarousel3, #theCarousel4, #theCarousel, #theCarousel2,
+    #theCarousel3-1, #theCarousel4-1, #theCarousel-1, #theCarousel2-1 {
         display: none;
     }
-    #theCarousel3mobile, #theCarouselmobile, #theCarousel2mobile {
+    #theCarousel3mobile, #theCarouselmobile, #theCarousel2mobile,
+    #theCarousel3mobile-1, #theCarouselmobile-1, #theCarousel2mobile-1 {
         display: block;
     }
     .footer {
@@ -723,6 +727,14 @@ h3 {
         justify-content: center;
         margin-bottom: 1.5rem;
     }
+    .banner1{
+        margin-right: 0 !important;
+        margin-top: 1rem;
+    }
+    .banner2 {
+        margin-left: 0 !important;
+        margin-bottom: 1rem;
+    }
  }
 
  
@@ -730,7 +742,7 @@ h3 {
  /* Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 768px) and (max-width: 1200px) {
     .hero {
-        height: 220px;
+        height: 329px;
     }
     .owl-carousel {
         height: 163px;
@@ -738,15 +750,24 @@ h3 {
     .owl-theme .owl-nav {
         display: none;
     }
-    #theCarousel5tablet, #theCarousel4tablet , #theCarousel3tablet, #theCarouseltablet{
+    #theCarousel5tablet, #theCarousel5tablet-1, #theCarousel4tablet, #theCarousel4tablet-1
+     , #theCarousel3tablet, #theCarousel3tablet-1, #theCarouseltablet, #theCarouseltablet-1{
         display: block;
     }
-    #theCarousel5, #theCarousel4, #theCarousel3, #theCarousel {
+    #theCarousel5, #theCarousel5-1, #theCarousel4, #theCarousel4-1, #theCarousel3, #theCarousel3-1, #theCarousel, #theCarousel-1 {
         display: none;
     }
     .banner  {
         height: 100%;
     }
+    /* .banner1{
+        margin: 0;
+        margin-top: 1rem;
+    }
+    .banner2 {
+        margin-left: 0 !important;
+        margin-bottom: 1rem;
+    } */
  }
  
  /* Large devices (laptops/desktops, 992px and up) */
