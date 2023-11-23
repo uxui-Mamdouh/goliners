@@ -623,25 +623,17 @@ h3 {
 #theCarousel5mobile {
     display: none;
 }
-#theCarousel5tablet,#theCarousel5mobile, #theCarousel4mobile, #theCarousel3mobile, #theCarouselmobile, 
-#theCarousel4tablet , #theCarousel3tablet, #theCarouseltablet, #theCarousel2mobile,
-#theCarousel5tablet-1,#theCarousel5mobile-1, #theCarousel4mobile-1, #theCarousel3mobile-1, #theCarouselmobile-1, 
-#theCarousel4tablet-1 , #theCarousel3tablet-1, #theCarouseltablet-1, #theCarousel2mobile-1 {
-    display: none;
+.for-mobile, .for-tablet {
+    display: none !important;
 }
 
 /* css for resposive screens ----------------------------------------------------- */
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
-    #theCarousel5mobile, #theCarousel5mobile-1 {
-        display: none;
-    }
-    #theCarousel5tablet, #theCarousel5tablet-1 {
-        display: block;
-    }
- }
+
  /* Extra small devices (phones, 600px and down) */
  @media only screen and (max-width: 600px) {
+    .for-desktop, .for-tablet{
+        display: none !important;
+    }
     .header {
         padding: 2.5rem 0;
     }
@@ -685,29 +677,14 @@ h3 {
     .brand-product img {
         width: 100%;
     }
-    #theCarousel5mobile, #theCarousel5mobile-1 {
-        display: block;
+    .for-mobile {
+        display: block !important;
     }
-    #theCarousel5, #theCarousel5-1 {
-        display: none;
-    }
-    #theCarousel5tablet, #theCarousel5tablet {
-        display: none;
-    }
+   
     .banners .banner2 {
         margin-bottom: 2rem;
     }
-    #theCarousel4mobile, #theCarousel4mobile-1 {
-        display: block;
-    }
-    #theCarousel3, #theCarousel4, #theCarousel, #theCarousel2,
-    #theCarousel3-1, #theCarousel4-1, #theCarousel-1, #theCarousel2-1 {
-        display: none;
-    }
-    #theCarousel3mobile, #theCarouselmobile, #theCarousel2mobile,
-    #theCarousel3mobile-1, #theCarouselmobile-1, #theCarousel2mobile-1 {
-        display: block;
-    }
+    
     .footer {
         text-align: center;
     }
@@ -750,24 +727,15 @@ h3 {
     .owl-theme .owl-nav {
         display: none;
     }
-    #theCarousel5tablet, #theCarousel5tablet-1, #theCarousel4tablet, #theCarousel4tablet-1
-     , #theCarousel3tablet, #theCarousel3tablet-1, #theCarouseltablet, #theCarouseltablet-1{
-        display: block;
+    .for-tablet{
+        display: block !important;
     }
-    #theCarousel5, #theCarousel5-1, #theCarousel4, #theCarousel4-1, #theCarousel3, #theCarousel3-1, #theCarousel, #theCarousel-1 {
-        display: none;
+    .for-mobile, .for-desktop {
+        display: none !important;
     }
     .banner  {
         height: 100%;
     }
-    /* .banner1{
-        margin: 0;
-        margin-top: 1rem;
-    }
-    .banner2 {
-        margin-left: 0 !important;
-        margin-bottom: 1rem;
-    } */
  }
  
  /* Large devices (laptops/desktops, 992px and up) */
