@@ -18,22 +18,42 @@ $(document).ready(function() {
         }
     });
 
+    // $('.tab').on('click', function() {
+    //     const tabId = $(this).data('tab');
+        
+    //     // Hide all tab contents
+    //     $('.tab-content').removeClass('active');
+
+    //     // Show the selected tab content
+    //     $('#' + tabId).addClass('active');
+    //     console.log('#' + tabId);
+
+    //     // Remove active class from all tabs
+    //     $('.tab').removeClass('active');
+
+    //     // Add active class to the clicked tab
+    //     $(this).addClass('active');
+    // });
     $('.tab').on('click', function() {
         const tabId = $(this).data('tab');
         
-        // Hide all tab contents
-        $('.tab-content').removeClass('active');
-
+        // Get the section context
+        const sectionContext = $(this).closest('.brand-item'); // قم بتغيير 'your-section-class' إلى الكلاس الصحيح للسكشن الخاص بك
+    
+        // Hide all tab contents within the section
+        $('.tab-content', sectionContext).removeClass('active');
+    
         // Show the selected tab content
-        $('#' + tabId).addClass('active');
+        $('#' + tabId, sectionContext).addClass('active');
         console.log('#' + tabId);
-
-        // Remove active class from all tabs
-        $('.tab').removeClass('active');
-
+    
+        // Remove active class from all tabs within the section
+        $('.tab', sectionContext).removeClass('active');
+    
         // Add active class to the clicked tab
         $(this).addClass('active');
     });
+    
 
 
 
