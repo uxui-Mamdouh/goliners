@@ -719,13 +719,17 @@ h3 {
  /* Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 768px) and (max-width: 1200px) {
     .hero {
-        height: 329px;
+        height: 450px;
     }
     .owl-carousel {
         height: 163px;
     }
     .owl-theme .owl-nav {
         display: none;
+    }
+    .owl-theme .owl-dots {
+        bottom: -150%;
+        
     }
     .for-tablet{
         display: block !important;
