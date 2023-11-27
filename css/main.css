@@ -5,7 +5,7 @@
     --greytext: #8C8C8C;
     --lightgold: rgba(220, 188, 130, 0.12);
     --accent: #FF035E;
-    --lightaccent: rgba(255, 3, 94, 0.12);;
+    --lightaccent: rgba(255, 3, 94, 0.12);
 }
 body {
     background-color: var(--white); 
@@ -203,13 +203,15 @@ h3 {
 }
 /* hero section */
 .hero {
-    height: 675px;
+    /* height: 675px; */
+    height: 80vh;
 }
 .hero-slider {
     direction: ltr;
+    height: 100%;
 }
 .owl-carousel {
-    height: 500px;
+    height: 100%;
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
@@ -219,7 +221,7 @@ h3 {
 	/* margin-top: -5rem; */
 	z-index: 8;
 	position: absolute;
-	bottom: -23%;
+	bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -249,7 +251,7 @@ h3 {
 	border-radius: 3px;
 	position: absolute;
 	z-index: 9;
-	top: 73%;
+	top: 50%;
 	transform: translateY(-50%);
 }
 .owl-theme .owl-nav span {
@@ -649,7 +651,8 @@ h3 {
         margin-top: 1rem;
     }
     .hero {
-        height: 340px;
+        /* height: 340px; */
+        height: 30vh;
     }
     .owl-carousel {
         height: 237px;
@@ -719,7 +722,8 @@ h3 {
  /* Medium devices (landscape tablets, 768px and up) */
  @media only screen and (min-width: 768px) and (max-width: 1200px) {
     .hero {
-        height: 450px;
+        /* height: 450px; */
+        height: 25vh;
     }
     .owl-carousel {
         height: 163px;
@@ -728,7 +732,7 @@ h3 {
         display: none;
     }
     .owl-theme .owl-dots {
-        bottom: -150%;
+        bottom: -10%;
         
     }
     .for-tablet{
